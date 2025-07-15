@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # medan_magnet
 
 A new Flutter project.
@@ -14,3 +15,6 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+=======
+# medanmagnet
+>>>>>>> 3bf8328511500e3975f2c7c5f4762e1a0d4f109f
