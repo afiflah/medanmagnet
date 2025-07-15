@@ -1,20 +1,83 @@
-<<<<<<< HEAD
-# medan_magnet
+# 🧲 Medan Magnet
 
-A new Flutter project.
+Aplikasi **Toko Bangunan** berbasis Flutter dan Supabase, dibuat untuk memudahkan penjualan produk material bangunan.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🚀 Fitur Utama
 
-A few resources to get you started if this is your first Flutter project:
+- 🏠 **Halaman Admin**
+  - Dashboard statistik (total user, pesanan, pendapatan, pesanan dibatalkan)
+  - Manajemen produk (tambah / edit / hapus dengan upload gambar)
+  - Manajemen pesanan (lihat, cari, ubah status pesanan)
+  - Chat langsung dengan user
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- 👤 **Halaman User**
+  - Lihat produk dengan gambar & kategori
+  - Pembelian produk (menambahkan ke keranjang)
+  - Halaman profil & riwayat pesanan
+  - Chat langsung dengan admin
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-=======
-# medanmagnet
->>>>>>> 3bf8328511500e3975f2c7c5f4762e1a0d4f109f
+- 📦 **Supabase Integration**
+  - Database: user, product, orders, chat
+  - Storage: upload gambar produk
+  - Kebijakan RLS & storage policy tanpa Supabase Auth
+
+---
+
+## ⚙️ Instalasi
+
+1. Clone repo:
+    ```bash
+    git clone https://github.com/afiflah/medanmagnet.git
+    cd medanmagnet
+    ```
+
+2. Install dependencies:
+    ```bash
+    flutter pub get
+    ```
+
+3. Konfigurasi environment:
+    - Buat file `.env` (atau masukkan variabel Supabase di `main.dart`)
+    - Isi URL & anon key Supabase kamu
+
+4. Run aplikasi:
+    ```bash
+    flutter run
+    ```
+
+---
+
+## 📁 Struktur Project
+
+/lib
+├── pages/
+│ ├── auth_page.dart
+│ ├── home_admin_page.dart
+│ ├── manajemen_produk_page.dart
+│ ├── manajemen_pesanan_page.dart
+│ ├── home_user_page.dart
+│ ├── cart_page.dart
+│ ├── history_page.dart
+│ ├── profile_page.dart
+│ ├── chat_admin_page.dart
+│ ├── chat_user_page.dart
+│ └── chat_detail_page.dart
+├── components/
+│ ├── admin_sidebar.dart
+│ └── user_sidebar.dart
+└── main.dart
+
+🛠️ Konfigurasi Lain
+- gitignore sudah disediakan untuk Flutter (build/, .dart_tool/, dll.).
+- Login menggunakan tabel users, bukan Supabase Auth (email/password custom).
+- Chat 1-on-1 antara admin dan user via tabel chat + chat_detail.
+
+❓Masalah Umum
+- StorageException 403 Unauthorized → pastikan policy di atas sudah dibuat.
+- Fetch / Timeout → cek endpoint supabase, permissions, dan CORS.
+- Merge / Git conflicts → konsultasi via issue di repo.
+
+🙌 Kontribusi
+Ingin bantu tambah fitur, perbaiki bug, atau optimasi UI? Silakan fork repository dan buat pull request.
